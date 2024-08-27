@@ -1,5 +1,4 @@
-﻿
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using ExemploHttp.Models;
 using ExemploHttp.Services;
 using System;
@@ -12,22 +11,23 @@ using System.Windows.Input;
 
 namespace ExemploHttp.ViewModels
 {
-    public partial class PostsViewModel : ObservableObject
+    public partial class PhotosViewModel : ObservableObject
     {
+
         [ObservableProperty]
-        ObservableCollection<Post> posts;
+        ObservableCollection<Photo> photos;
 
         public ICommand getPostsCommand { get; }
 
-        public PostsViewModel()
+        public PhotosViewModel()
         {
-            getPostsCommand = new Command(getPosts);
+            getPostsCommand = new Command(getPhotos);
         }
 
-        public async void getPosts()
+        public async void getPhotos()
         {
-           RestService restService = new RestService();
-           Posts = await restService.getPostAsync();
+            RestService restService = new RestService();
+            Photos = await restService.GetPhotoAsync();
         }
     }
 }
