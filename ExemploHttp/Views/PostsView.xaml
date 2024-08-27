@@ -7,18 +7,22 @@
         <Button Command="{Binding getPostsCommand}"
             Text="Caregar Postagens"/>
         <ScrollView>
+            
             <CollectionView ItemsSource="{Binding Posts}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
+                        
                         <VerticalStackLayout>
                             <Label 
                               Text="{Binding Title}" />
                             <Label 
                               Text="{Binding Body}"/>
                         </VerticalStackLayout>
+                        
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            
         </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

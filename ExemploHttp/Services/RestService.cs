@@ -49,7 +49,7 @@ namespace ExemploHttp.Services
 			}
 			catch (Exception ex)
 			{
-				Debug.WriteLine(@"\tERROR {0}", ex.Message);
+
 			}
 
 			return posts;
@@ -73,7 +73,7 @@ namespace ExemploHttp.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error fetching data: {ex.Message}");
+               
             }
 
             return photos;
