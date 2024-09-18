@@ -17,11 +17,11 @@ namespace ExemploHttp.ViewModels
         [ObservableProperty]
         ObservableCollection<Photo> photos;
 
-        public ICommand getPhotosCommand { get; }
+        public ICommand getPostsCommand { get; }
 
         public PhotosViewModel()
         {
-            getPhotosCommand = new Command(getPhotos);
+            getPostsCommand = new Command(getPhotos);
         }
 
         public async void getPhotos()

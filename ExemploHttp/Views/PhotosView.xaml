@@ -8,7 +8,7 @@
 
     <VerticalStackLayout>
         <Button Command="{Binding getPhotosCommand}"
-            Text="Caregar Fotos"/>
+            Text="Caregar Postagens"/>
         <ScrollView>
             <CollectionView ItemsSource="{Binding Photos}">
                 <CollectionView.ItemTemplate>
